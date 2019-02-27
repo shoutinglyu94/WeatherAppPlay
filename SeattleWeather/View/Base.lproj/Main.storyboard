@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="SeattleWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background1" translatesAutoresizingMaskIntoConstraints="NO" id="dKc-0g-8J8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qMH-JS-zMR">
+                                <rect key="frame" x="30" y="70" width="260" height="220"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2o-y0-r1r">
+                                        <rect key="frame" x="63" y="0.0" width="134" height="40"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                        <state key="normal" title="Change City">
+                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeCity:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sXS-6u-mxa"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMF-iR-RmI">
+                                        <rect key="frame" x="84.5" y="60" width="91" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfM-sP-PcR">
+                                        <rect key="frame" x="45" y="120" width="170.5" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9d-wZ-jyq">
+                                        <rect key="frame" x="73" y="180" width="114.5" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dKc-0g-8J8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GGb-Gh-lce"/>
+                            <constraint firstAttribute="trailing" secondItem="dKc-0g-8J8" secondAttribute="trailing" id="HQU-AQ-b01"/>
+                            <constraint firstAttribute="bottom" secondItem="dKc-0g-8J8" secondAttribute="bottom" id="Lu2-BM-iZT"/>
+                            <constraint firstItem="qMH-JS-zMR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ODq-V6-8st"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qMH-JS-zMR" secondAttribute="trailing" constant="30" id="TR6-1j-NdQ"/>
+                            <constraint firstItem="qMH-JS-zMR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="nc4-ld-9f8"/>
+                            <constraint firstItem="dKc-0g-8J8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zoC-Az-vi5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblCityName" destination="aMF-iR-RmI" id="W8s-nX-CpJ"/>
+                        <outlet property="lblTemperature" destination="l9d-wZ-jyq" id="1pj-8n-gAr"/>
+                        <outlet property="lblWeatherCondition" destination="JfM-sP-PcR" id="qjt-gE-zi4"/>
+                        <segue destination="0aw-IJ-Z93" kind="show" identifier="changeCitySegue" id="3UX-UW-JaF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.75" y="38.75"/>
+        </scene>
+        <!--Change City View Controller-->
+        <scene sceneID="jQY-lv-Xhf">
+            <objects>
+                <viewController id="0aw-IJ-Z93" customClass="ChangeCityViewController" customModule="SeattleWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fnc-lw-ogk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="Gbp-tO-6YT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0eG-Kq-QPv">
+                                <rect key="frame" x="76" y="100" width="168" height="177"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cy1-25-kcV">
+                                        <rect key="frame" x="58" y="0.0" width="52" height="39"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backToWeather:" destination="0aw-IJ-Z93" eventType="touchUpInside" id="jYv-mZ-OfP"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NVs-Jl-5V2">
+                                        <rect key="frame" x="3" y="69" width="162" height="39"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6p-Ib-89N">
+                                        <rect key="frame" x="16" y="138" width="136" height="39"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="CHANGE CITY">
+                                            <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeCityPressedAgain:" destination="0aw-IJ-Z93" eventType="touchUpInside" id="mqq-1i-o7B"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0eG-Kq-QPv" firstAttribute="leading" secondItem="fnc-lw-ogk" secondAttribute="leadingMargin" constant="60" id="4Rx-ST-9Ys"/>
+                            <constraint firstItem="Gbp-tO-6YT" firstAttribute="leading" secondItem="fnc-lw-ogk" secondAttribute="leading" id="M4o-Qq-VWX"/>
+                            <constraint firstItem="0eG-Kq-QPv" firstAttribute="top" secondItem="fnc-lw-ogk" secondAttribute="topMargin" constant="80" id="UVs-x6-mXE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0eG-Kq-QPv" secondAttribute="trailing" constant="60" id="VSb-Kl-EZG"/>
+                            <constraint firstAttribute="trailing" secondItem="Gbp-tO-6YT" secondAttribute="trailing" id="WLS-4n-A4Q"/>
+                            <constraint firstAttribute="bottom" secondItem="Gbp-tO-6YT" secondAttribute="bottom" id="plh-Dk-Knc"/>
+                            <constraint firstItem="Gbp-tO-6YT" firstAttribute="top" secondItem="fnc-lw-ogk" secondAttribute="top" id="u0a-XH-eYU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mIl-7U-25r"/>
+                    </view>
+                    <connections>
+                        <outlet property="textCityName" destination="NVs-Jl-5V2" id="nDn-6g-oIM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tB8-WL-yXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="39"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background1" width="360" height="640"/>
+        <image name="Background2" width="360" height="640"/>
+    </resources>
+</document>
